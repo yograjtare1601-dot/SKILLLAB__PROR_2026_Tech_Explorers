@@ -370,8 +370,8 @@ Suggested sequence:
 - error handling.
 
 **Insert image below:**  
-<img width="1600" height="1200" alt="image" src="" />
-<img width="1600" height="1200" alt="image" src="" />
+<img width="1600" height="1200" alt="image" src="https://github.com/yograjtare1601-dot/SKILLLAB__PROR_2026_Tech_Explorers/blob/main/images/flow%20diagram.jpeg?raw=true" />
+
 
 
 
@@ -382,37 +382,81 @@ Suggested sequence:
 
 | Item                             | Quantity | In Kit? | Need to Buy? | Estimated Cost | Material / Spec               | Why This Choice?          |
 | -------------------------------- | --------:| ------- | ------------ | --------------:| ----------------------------- | ------------------------- |
-| `[ESP32]`                        | `1`      | `Yes`   | `No`         | `0`            | `38 Pin ESP32`                | `[To control components]` |
-| `[Motor Driver]`                 | `[1]`    | `[Yes]` | `[No]`       | `0`            | `[LN296]`                     | `[To drive both motors]`  |
-| `[DC Motors and wheel]`          | `[2]`    | `[No]`  | `[Yes]`      | `[150]`        | `[BO Motors and 6 cm wheels]` | `[high torque motors]`    |
-| `[Buck Converter]`               | `[1]`    | `[No]`  | `[Yes]`      | `[75]`         |                               |                           |
-| `[Li-ion batteries with holder]` | `[1]`    | `[No]`  | `[Yes]`      | `[200]`        |                               |                           |
+| `[Shrike lite]`                        | `1`      | `Yes`   | `No`         | `369`            | `38 Pin ESP32`                | `[To control components]` |
+| `[LED'S]`                 | `[6]`    | `[Yes]` | `[No]`       | `0`            
+| `[Joystick]`          | `[1]`    | `[No]`  | `[Yes]`      | `[150]`        | `[BO Motors and 6 cm wheels]` | `[high torque motors]`    |
+                             |                           |
 
 ## 11.2 Material Justification
 
 Explain why you selected your main materials and components.
 
 **Response:**  
-`DC motors (BO motors) were chosen instead of servos or steppers because the system requires continuous rotation for movement rather than precise angular control (Previously, we were considering using steppers as we were planning on tracking movement on the ESP using its relative position from an origin, but since we're using a camera now, this is not required). A motor driver (L298N) was used to allow bidirectional control and speed variation using PWM.`
+`1. Raspberry Pi Pico
+
+* Purpose: Main controller to run the game logic
+* Why selected:
+    * Supports multiple GPIO pins
+    * Has built-in ADC (for joystick input)
+    * Low cost and easy to program (MicroPython)
+2. LEDs (4–6 units)
+
+* Purpose: Display the blinking pattern
+* Why selected:
+    * Simple visual output
+    * Low power consumption
+    * Easy to control using GPIO pins
+3. Resistors (220Ω)
+* Purpose: Limit current for LEDs
+* Why selected:
+    * Protect LEDs from damage
+    * Ensure stable brightness
+4. Joystick Module
+* Purpose: User input (movement + selection)
+* Why selected:
+    * Provides both analog (X, Y) and digital (button) input
+    * Makes game interactive and unique compared to push buttons
+5. Breadboard
+* Purpose: Temporary circuit assembly
+* Why selected:
+    * No soldering required
+    * Easy to modify connections
+6. Jumper Wires
+* Purpose: Connect all components
+* Why selected:
+    * Flexible and reusable
+    * Helps in clean and organized wiring
+7. Power Supply (USB / 3.3V via Pico)
+* Purpose: Provide power to the circuit
+* Why selected:
+    * Safe and stable power source
+    * Easily available through USB
+8. (Optional) Buzzer
+* Purpose: Sound feedback for correct/wrong input
+* Why selected:
+    * Improves user experience
+    * Adds interactive feedback
+Conclusion (Short)
+All components were selected based on simplicity, low cost, ease of use, and compatibility, making the system efficient for implementing a real-time memory-based game.`
 
 
 ## 11.3 Items You chose
 
 | Item                 | Why Needed               | Purchase Link | Latest Safe Date to Procure | Status       |
 | -------------------- | ------------------------ | ------------- | --------------------------- | ------------ |
-| `BO Motors + Wheels` | `Drive system for car`   | `robu.in`     | `15th April`                | `[Received]` |
-| `Buck Converter`     | `Stable power for ESP32` | `local store` | `before testing`            | `[Received]` |
-| `Li-ion Batteries`   | `Portable power`         | `local store` | `before testing`            | `Recieved`   |
+| `Shrike lite ` | 'Main controller for logic and motor control`   | `robu.in`     | `Day 1 `                | `[Received]` |
+| `Joystick`     | `used to control led's` | `local store` | `before testing`            | `[Received]` |
+| `LED'S`   | 'for pattern`         | `local store` | `before testing`            | `Recieved`   |
 
 ## 11.4 Budget Summary
 
 | Budget Item           | Estimated Cost              |
 | --------------------- | ---------------------------:|
-| Electronics           | `[400]`                     |
-| Mechanical parts      | `[200]`                     |
-| Fabrication materials | `[0 (Available on campus)]` |
-| Purchased extras      | `[0]`                       |
-| Contingency           | `[300]`                     |
+|Shrike lite         | `[400]`                     |
+|leds      | `[1rs/pc]`                     |
+| Joystick | `[150]` |
+| BreadboRD      | `[250]`                       |
+
 | **Total**             | `[900]`                     |
 
 ## 11.5 Budget Reflection
@@ -429,34 +473,37 @@ If your cost is too high, what can be simplified, removed, substituted, or share
 
 Write how your team will work together.
 
-Include:
-
-- how tasks are divided,
-- how decisions are made,
-- how progress will be checked,
-- what happens if a task is delayed,
-- how documentation will be maintained.
+Task Division: Work is divided into four main areas: documentation and presentation, research and ideation, hardware implementation, and software development. Each member takes primary ownership of one area while assisting others during integration and testing phases.
+Decision Making: All major design and implementation decisions are made collectively. Quick decisions during development are handled through group discussion and consensus to avoid delays, especially during hardware testing phases.
+Progress Tracking: Progress is tracked through regular check-ins during work sessions. The team reviews completed tasks, current blockers, and next steps at fixed intervals to ensure alignment.
+Handling Delays: If a task is delayed, other members temporarily support or redistribute workload to ensure the overall project timeline is not affected. Priority is given to maintaining system integration rather than individual task completion.
+Documentation Maintenance: Documentation is maintained collaboratively. One member updates the main document, while others provide inputs after completing their respective tasks. All changes are reviewed by the group to ensure accuracy and consistency.
 
 **Response:**  
 
 
 ## 12.2 Task Breakdown
 
-| Task ID | Task                    | Owner    | Estimated Hours | Deadline     | Dependency | Status |
-| ------- | ----------------------- | -------- | ---------------:| ------------ | ---------- | ------ |
-| T1      | `[Finalize concept]`    | `[Both]` | `2`             | `1st April`  | `None`     | `Done` |
+| Task ID | Task                                            | Owner      | Estimated Hours | Phase Timing | Dependency | Status |
+| ------- | ----------------------------------------------- | ---------- | --------------- | ------------ | ---------- | ------ |
+| T1      | Ideation & Concept Finalization                 | All        | 1               | Hour 1       | None       | Done   |
+| T2      | Core Implementation (Hardware + Software Setup) | Vitthal + Team | 3               | Hours 2–4    | T1         | Done   |
+| T3      | Documentation (Report writing)                  | YOGRAJ    | 4 (parallel)    | Hours 2–6    | T1         | Done   |
+| T4      | PPT Preparation                                 | Pranjal & DIVESH    | 3 (parallel)    | Hours 2–6    | T1         | Done   |
+| T5      | Hardware Assembly                               | Vitthal & Yograj      | 1               | Hour 5       | T2         | Done   |
+| T6      | Testing & Debugging                             | All        | 1               | Hour 5       | T2, T5     | Done   |
 
 
 ## 12.3 Responsibility Split
 
 | Area                 | Main Owner | Support Owner |
 | -------------------- | ---------- | ------------- |
-| Concept              | `[Gopal]`  | `[Kader]`    |
-| Electronics          | `[]`       | `[]`     |
-| Coding               | `[]`       | `[]`     |
-| Mechanical build     | `[]`       | `[]`    |
-| Testing              | `[]`       | `[]`    |
-| Documentation        | `[]`       | `[]`     |
+| Concept              | `[YOGRAJl]`  | `[VITTHALRAO]`    |
+| Electronics          | `[YOGRAJ]`       | `[VITTHALRAOJ]`     |
+| Coding               | `[VITHALRAO]`       | `[YOGRAJ]`     |
+| Mechanical build     | `[VITTHALRAO]`       | `[YOGRAJ]`    |
+| Testing              | `[VITTHALRAO]`       | `[PRANJAL]`    |
+| Documentation        | `[DIVESH]`       | `[YOGRAJ]`     |
 
 ---
 
@@ -510,10 +557,15 @@ Expected outcomes:
 
 | Week   | Planned Goal   | What Actually Happened | What Changed   | Next Steps     |
 | ------ | -------------- | ---------------------- | -------------- | -------------- |
-|  Hour 1 | | `[Write here]`         | `[Write here]` | `[Write here]` |
-|  Hour  2 | `[Writeh here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-| Hour 3 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-| Hour 4 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
+| Hour 1 | Ideation and final concept selection            | Explored 4 ideas: Alchol detector,intractive ping pong,gps tracker                    | Shifted from utility-based ideas to a game-based semaphore creature concept                       | Move to hardware selection and feasibility testing      |
+| Hour 2-4| Component testing and hardware selection        | Tested components and restructured design.
+
+| Input system simplified to joystick for better control and reliability                            | Begin integration of servo + joystick system            |
+| Hour 5  | Basic system integration (LED'S, joystick) | LCD brightness issues occurred, servo alignment slightly tilted affecting accuracy, joystick code stuck in loop, and library installation issues prevented compilation | Debugging required for LED'S AMD JOYSTICK                 | Fix wiring, install libraries, stabilize input handling |
+| Hour 6| System debugging and prototype stabilization    | Partial working system achieved after fixing code and library issues. Servo and joystick interaction improved but still not fully stable                               | System remained semi-functional due to hardware constraints and calibration limitations           | Prepare system for final integration and build assembly |
+| Hour 7 | Final integration and testing                   | Hardware assembly completed. 
+| Mechanical and electrical integration finalized, minor accuracy issues remained in servo movement | Move to documentation and presentation preparation      |
+| Hour 8 | PPT creation, documentation, and final assembly | PPT and documentation completed in parallel. Final project assembly finished and system prepared for demo                                                              | Focus shifted from development to presentation and packaging of the project                       | Final debugging and readiness for demonstration         |
 
 ---
 
@@ -523,7 +575,7 @@ Expected outcomes:
 
 | Risk                                                            | Type         | Likelihood | Impact   | Mitigation Plan                                                                       | Owner                |
 | --------------------------------------------------------------- | ------------ | ---------- | -------- | ------------------------------------------------------------------------------------- | -------------------- |
-| WiFi connection between laptop and ESP32 becomes unstable       | `Technical`  | `Medium`   | `High`   | Keep ESP32 close, ensure stable power supply, reduce network load, add fail-safe stop | `[Gopal]`           |
+| LED'S may not glow fully | Technical | High       | High   | The pattern genrated may to diffcult or fast|
 
 
 ## 14.2 Biggest Unknown Right Now
@@ -540,7 +592,8 @@ The biggest problem faced at this stage is ensuring consistent and accurate sync
 
 | What Needs Testing     | How You Will Test It                                                                 | Success Condition                                                                                    |
 | ---------------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
-| `[Wifi connection]`    | `[Check if motor spins via app button]`                                              | `[Both motors accurately respond to wifi signals]`                                                   |
+| `[LED'S]`    | `[By giving high input output]`                                              | `[LED'S are working ]` |
+| `[Joystick]`    | `[Configuring X and Y direction and pressed button]`                                              | `[values shown and button pressed detected ]` |
                        |
 ## 15.2 Testing and Debugging Log
 
