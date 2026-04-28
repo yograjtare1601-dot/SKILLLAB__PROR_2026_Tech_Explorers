@@ -683,7 +683,9 @@ Suggested images:
 - mechanism test,
 - app screenshot,
 - final build.
-- <img width="960" height="1280" alt="WhatsApp Image 2026-04-24 at 9 46 02 AM (1)" src="https://github.com/user-attachments/assets/74baa570-5770-483e-be6d-d2f03386e37c](https://github.com/yograjtare1601-dot/SKILLLAB__PROR_2026_Tech_Explorers/blob/main/images/WORKING%202.jpeg?raw=true)" />
+
+![image alt](https://github.com/yograjtare1601-dot/SKILLLAB__PROR_2026_Tech_Explorers/blob/main/images/WORKING%202.jpeg?raw=true)
+
 
 
 
