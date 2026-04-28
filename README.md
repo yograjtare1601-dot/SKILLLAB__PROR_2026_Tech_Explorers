@@ -121,7 +121,7 @@ List what inspired the project.
 
 | Source Type | Title / Link                                                        | What Inspired You                                                                         |
 | ----------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `[Video]`   | `https://www.instagram.com/reel/DW4CT7WCDry/?igsh=cXg3dzAxYmdncDBo` | `How projection mapping can be used to create interactive digital + physical experiences` |
+| `[YOUTUBE]`   | `(https://youtu.be/R_HF4PIuCJA?si=_zFgoTzvEJT0yjld)` | `Memory Mapping` |
 |             |                                                                     |                                                                                           |
 |             |                                                                     |                                                                                           |
 
