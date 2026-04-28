@@ -128,8 +128,7 @@ List what inspired the project.
 ## 3.2 Original Twist
 
 What makes your project original?
-
-**Response:**  
+The originality of this project lies in transforming a simple LED blinking system into an interactive, joystick-controlled memory challenge that combines embedded systems with human cognitive   
 
 
 ---
