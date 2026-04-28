@@ -544,14 +544,15 @@ What is the single biggest uncertainty in your project at this stage?
 
 | Date          | Problem Found                         | Type         | What You Tried                                | Result               | Next Action                                    |
 | ------------- | ------------------------------------- | ------------ | --------------------------------------------- | -------------------- | ---------------------------------------------- |
-| `18th April`  | `Car not balancing properly`          | `Mechanical` | `Add low-friction caster support to one side` | `Worked`             | `improve caster structure`                     |
+| `28th April`  | Led were not glowing at first and       | `Electrical  | `We have tried by chsanging diffrent codes  | Then led started to glow | Started working with joy stick            
+| 28th April  | Lcd display was not working with shrike | Electrical | We changed pico to esp32 to check whether lcd is working | We saw that lcd is working | We have started with assembling of the components    
 
 
 ## 15.3 Playtesting Notes
 
 | Tester      | What They Did                        | What Confused Them                    | What They Enjoyed                         | What You Will Change                          |
 | ----------- | ------------------------------------ | ------------------------------------- | ----------------------------------------- | --------------------------------------------- |
-| `Gopal` | `Tried navigating through obstacles` | `Some obstacles ewren't clear enough` | `Liked projection + real car interaction` | `Add a slight red highlight around obstacles` |
+Pranjal | Designed LED patterns, developed code using Raspberry Pi Pico, and handled system integration | Enjoyed creating and testing different LED patterns and logic | Improve code optimization and add more pattern variations |Yograj | Tested LEDs, verified connections, and checked pattern outputs | Enjoyed observing different LED behaviors and patterns | Improve testing accuracy and reduce wiring errors |Divyesh | Assembled circuit on breadboard, handled wiring of LEDs and resistors | Enjoyed building the physical setup and circuit connections | Improve wiring neatness and connection stability |Vitthalrao | Tested LCD, verified display connections and output | Enjoyed working with display and seeing system output visually | Improve display clarity and integration with patterns |
 
 
 ---
