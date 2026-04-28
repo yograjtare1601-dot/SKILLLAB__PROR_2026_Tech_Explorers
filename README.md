@@ -544,15 +544,19 @@ What is the single biggest uncertainty in your project at this stage?
 
 | Date          | Problem Found                         | Type         | What You Tried                                | Result               | Next Action                                    |
 | ------------- | ------------------------------------- | ------------ | --------------------------------------------- | -------------------- | ---------------------------------------------- |
-| `28th April`  | Led were not glowing at first and       | `Electrical  | `We have tried by chsanging diffrent codes  | Then led started to glow | Started working with joy stick            
-| 28th April  | Lcd display was not working with shrike | Electrical | We changed pico to esp32 to check whether lcd is working | We saw that lcd is working | We have started with assembling of the components    
+| `28th April`  | Led were not glowing at first and'       | `Electrical  | `We have tried by chsanging diffrent codes  | Then led started to glow | Started working with joy stick            
+| 28th April  | Lcd display was not working with shrike | Electrical | We changed pico to esp32 to check whether lcd is working | We saw that lcd is not working | We have started with assembling of joystick
+|28th April  | Actual label of joystick to work was 5v but it was working on 3.3v properly | Electrical | So led started to glow while we were moving joystick| Started of assembling of both components | 
 
 
 ## 15.3 Playtesting Notes
 
 | Tester      | What They Did                        | What Confused Them                    | What They Enjoyed                         | What You Will Change                          |
 | ----------- | ------------------------------------ | ------------------------------------- | ----------------------------------------- | --------------------------------------------- |
-Pranjal | Designed LED patterns, developed code using Raspberry Pi Pico, and handled system integration | Enjoyed creating and testing different LED patterns and logic | Improve code optimization and add more pattern variations |Yograj | Tested LEDs, verified connections, and checked pattern outputs | Enjoyed observing different LED behaviors and patterns | Improve testing accuracy and reduce wiring errors |Divyesh | Assembled circuit on breadboard, handled wiring of LEDs and resistors | Enjoyed building the physical setup and circuit connections | Improve wiring neatness and connection stability |Vitthalrao | Tested LCD, verified display connections and output | Enjoyed working with display and seeing system output visually | Improve display clarity and integration with patterns |
+Pranjal | Designed LED patterns, developed code using Raspberry Pi Pico, and handled system integration |He was confused about the led pattern at first | Enjoyed creating and testing different LED patterns and logic | Improve code optimization and add more pattern variations |
+Yograj | Tested LEDs, verified connections, and checked pattern outputs |about the pattern output and numbering of led |Enjoyed observing different LED behaviors and patterns | Improve testing accuracy and reduce wiring errors |
+Divyesh | Assembled circuit on breadboard, handled wiring of LEDs and resistors and done documentation |Find diffculty while making documentation |Enjoyed building the physical setup and circuit connections | Improve wiring neatness and connection stability |
+Vitthalrao | Tested LCD, verified display connections and output |Lcd was not working at first so we have to double check it | Enjoyed working with display and seeing system output visually | Improve display clarity and integration with patterns |
 
 
 ---
@@ -572,10 +576,32 @@ Include:
 - wiring,
 - finishing,
 - revisions.
+  
+The fabrication process of the LED Pattern Memory Game involved designing, assembling, and integrating hardware components using a Raspberry Pi Pico and joystick module.
 
-**Response:**  
-`The fabrication process involved designing, manufacturing, assembling, and refining both the physical structure and electronic integration of the system.`
+Design:
+The circuit was planned by selecting components and arranging LEDs and joystick on a breadboard for proper layout and visibility.
 
+Cutting:
+Jumper wires were cut to appropriate lengths to maintain a neat and organized circuit.
+
+3D Printing (Optional):
+An enclosure can be designed using CAD and fabricated using 3D printing for better structure and safety.
+
+Assembly:
+All components, including LEDs and joystick, were placed on the breadboard in an accessible arrangement.
+
+Fastening:
+Components were securely fitted on the breadboard, and enclosure fastening can be done if used.
+
+Wiring:
+LEDs were connected to Pico GPIO pins through resistors, with a common ground. The joystick was connected to analog and digital pins for input control.
+
+Finishing:
+Connections were checked and adjusted to ensure proper working and a clean layout.
+
+Revisions:
+The system was tested multiple times, and minor corrections were made to improve performance and accuracy.
 `Design (CAD Modeling):
 The initial model was created using CAD software, where components were designed based on the actual dimensions of the electronic parts. This ensured accurate fitting and minimized errors during assembly.
 Cutting (Laser Cutting):
