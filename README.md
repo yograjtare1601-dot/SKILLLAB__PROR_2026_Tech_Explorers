@@ -57,18 +57,21 @@ By the final review, this README should clearly show:
 
 ## 1.1 Studio / Group Name
 
-`Project^2`
+`Tech Explorer`
 
 ## 1.2 Team Members
 
 | Name           | Primary Role                    | Secondary Role | Strengths Brought to the Project |
 | -------------- | ------------------------------- | -------------- | -------------------------------- |
-| `Gopalakrishnan` | `[Electronics / Coding / App ]` | `Documentation`  | `Documentation, Gift of Gab `|
-| `KAder Shaikh`  | `[Electronics / Fabrication]`   | `[Coding]`     | `Material Handling, Hardware`    |
+|Pranjal shah | `` | `Product Designing`  | `Hardware `| `Material Handling, Hardware`    |
+| Divyesh Rawat  | `Research`   | `Designing`     | `Material Handling, Hardware`    |
+| Yograj Tare  | `Documentation`   | `coding`     | `Material Handling, Hardware`    |
+| Vitthalrao Zende  | `Hardware`   | `Hardware`     | `Material Handling, Hardware,coding`    |
+
 
 ## 1.3 Project Title
 
-`"Project Project"`
+`"Memory matrix game"`
 
 `(because Project-or)`
 
@@ -263,13 +266,15 @@ Add a sketch with labels showing:
 
 | Component                 | Quantity | Purpose                               |
 | ------------------------- | --------:| ------------------------------------- |
-| `[ESP32]`                 | `1`      | `[Main controller]`                   |
-| `[L298N Motor Driver]`    | `1`      | `[Control Motors]`                    |
-| `[BO Motors]`             | `2`      | `[Rotate wheels]`                     |
-| `[Buck Converter]`        | `1`      | `[Power ESP32]`                       |
-| `[Li Ion Battery Pack]`   | `2`      | `[Power]`                             |
-| `[Projector]`             | `1`      | `[Display obstacles]`                 |
-| `Camera (Webcam / Phone)` | `1`      | `[Tracks car position using markers]` |
+| `[Shrike lite]`                 | `1`      | `[Main controller]`                   |
+| `[Joystck]`    | `1`      | `[Control led's]`                  |
+| `[LED]`             | `8`      | `[Main logic]`                     |
+| `[Display]`        | `1`      | `[ show Progess]`                       |
+| `[Buzzer]`   | `2`      | `[Show Progress]`                             |
+| `[Push button]`             | `2`      | `[Display obstacles]`                 |
+| `Register` | `8`      | `[Protection]` |
+| `Breadborad` | `1`      | `[For prototyping]` |
+
 
 ## 8.2 Wiring Plan
 
