@@ -256,7 +256,7 @@ Add a sketch with labels showing:
 
 **Insert image below:**  
 `[Upload image and link here]`
-![image alt](https://github.com/yograjtare1601-dot/SKILLLAB__PROR_2026_Tech_Explorers/blob/main/images/Team_Teach_Explorer.jpeg?raw=true)
+![image alt](https://github.com/yograjtare1601-dot/SKILLLAB__PROR_2026_Tech_Explorers/blob/main/images/lables%20build%20sketch.jpeg?raw=true)
 ## 7.3 Approximate Dimensions
 
 | Dimension        | Value   |
