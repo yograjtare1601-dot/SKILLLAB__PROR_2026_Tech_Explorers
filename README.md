@@ -68,6 +68,7 @@ By the final review, this README should clearly show:
 | Yograj Tare  | `Documentation`   | `coding`     | `Material Handling, Hardware`    |
 | Vitthalrao Zende  | `Hardware`   | `Hardware`     | `Material Handling, Hardware,coding`    |
 
+![image alt](https://github.com/yograjtare1601-dot/SKILLLAB__PROR_2026_Tech_Explorers/blob/main/images/Team_Teach_Explorer.jpeg?raw=true)
 
 ## 1.3 Project Title
 
