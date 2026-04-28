@@ -63,7 +63,7 @@ By the final review, this README should clearly show:
 
 | Name           | Primary Role                    | Secondary Role | Strengths Brought to the Project |
 | -------------- | ------------------------------- | -------------- | -------------------------------- |
-|Pranjal shah | `` | `Product Designing`  | `Hardware `| `Material Handling, Hardware`    |
+|Pranjal Saha | `` | `Product Designing`  | `Hardware `| `Material Handling, Hardware`    |
 | Divyesh Rawat  | `Research`   | `Designing`     | `Material Handling, Hardware`    |
 | Yograj Tare  | `Documentation`   | `coding`     | `Material Handling, Hardware`    |
 | Vitthalrao Zende  | `Hardware`   | `Hardware`     | `Material Handling, Hardware,coding`    |
@@ -138,7 +138,7 @@ The originality of this project lies in transforming a simple LED blinking syste
 ## 4.1 User Journey 
 
 Describe exactly how a user will use the project.Make it a story
-**Response:**  
+A student connects the Raspberry Pi Pico to power and the LEDs turn ON in a simple blinking pattern. The student presses a button, and the LEDs start moving one by one like a running light. When the button is pressed again, the pattern changes to a different style. The student realizes that by giving simple inputs, they can control how the LEDs behave. This small setup helps them understand how a microcontroller controls outputs and creates patterns. 
 
                                                   |
 
@@ -149,20 +149,22 @@ Describe exactly how a user will use the project.Make it a story
 # 5. Definition of Success
 
 ## 5.1 Definition of “Usable”
-
+In our LED Simulator using the Raspberry Pi Pico, usability means:
+1. LEDs change patterns correctly
+2. Button/joystick works smoothly
+3. User can easily interact without difficulty
 
 
 ## 5.2 Minimum Usable Version
 
 What is the smallest version of this project that still delivers the core experience?
-
-**Response:**  
+The smallest version of the LED Simulator uses one LED and a microcontroller to demonstrate basic ON/OFF control and timing, which forms the foundation of all LED patterns.  
 
 
 ## 5.3 Stretch Features
 
 What features are nice to have but not essential?
-
+Features like display, sound, wireless control, and advanced effects are optional enhancements that improve user experience but are not required for the basic working of the LED Simulator.
 
 ---
 
