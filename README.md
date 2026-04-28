@@ -300,19 +300,12 @@ Insert a hand-drawn or software-made circuit diagram.
 
 **Insert image below:**  
 `[Upload image and link here]`
-<img width="867" height="1156" alt="" src="" />
+<img width="867" height="1156" alt="" src="https://github.com/yograjtare1601-dot/SKILLLAB__PROR_2026_Tech_Explorers/blob/main/images/flow%20diagram.jpeg?raw=true" />
 
 
 # 9. Power Plan
 
-| Question         | Response                                                                                                                                          |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Power source     | `Battery (Li-ion pack)`                                                                                                                           |
-| Voltage required | `~6–8.4V for motors (via driver), stepped down to 5V for ESP32 (buck converter)`                                                                  |
-| Current concerns | `Motors can draw high current under load, which may cause voltage drops affecting ESP32 and WiFi stability`                                       |
-| Safety concerns  | `Avoid over-discharging Li-ion batteries, ensure proper voltage regulation, prevent short circuits, and secure wiring to avoid loose connections` |
-
----
+Power source | Laptop USB power (5V) | | Voltage required | 5V from USB for Shrike Lite and Joystick (3.3V logic handled internally) | | Current concerns | Limited USB current can cause led's to not work properly | | Safety concerns | Avoiding all the led's to wokr simultaneously and bouncing of joystick module |
 
 # 10. Software Planning
 
@@ -320,11 +313,9 @@ Insert a hand-drawn or software-made circuit diagram.
 
 | Tool / Platform                | Purpose                                        |
 | ------------------------------ | ---------------------------------------------- |
-| `[MicroPython]`                | `Control ESP32`                                |
-| `[Python/PyGame/OpenCV]`       | `Track markers, game logic, create projection` |
-| `[Fusion/Blender/Illustrator]` | `[Prototyping structure]`                      |
-|                                |                                                |
-
+| `[Arduino IDE]`                | `Write and upload code to shrike lite (RP2040`                                |
+| `[Embedde C/C++]`       | `TProgram logic for all the led's and joystick` |
+| `[Fusion/Blender/Illustrator]` | `[Prototyping structure]`                     
 ## 10.2 Software Logic
 
 Describe what the code must do.
@@ -342,18 +333,24 @@ Include:
 **Response:**  
 `
 
-- **Startup behavior:**  
-  The ESP32 initializes motor pins, PWM control, and starts a WiFi access point with a web server. The laptop initializes camera input, tracking system, and projection mapping.
-- **Input handling:**  
-  Movement commands are received from the laptop (pygame sends http requests)
-- **Sensor reading:**  
-  The camera continuously captures frames, and OpenCV detects ArUco markers to determine the car’s position and orientation.
-- **Decision logic:**  
-  The system maps the car’s position into a virtual coordinate system and checks for nearby obstacles or collisions. If movement is valid, the command is allowed; if not, it is blocked or replaced with a feedback action (like a slight shake).
-- **Output behavior:**  
-  The ESP32 drives the motors using PWM signals to control speed and direction. The projector displays the updated game environment, including obstacles, targets, and feedback visuals.
-- **Communication logic:**  
-  The laptop sends HTTP requests (e.g., `/forward`, `/left`) to the ESP32 over WiFi. The ESP32 parses these commands and executes motor actions.
+-Lite)
+
+The code begins with a startup sequence where the Shrike Lite initializes all GPIO pins connected to LEDs, joystick input, and the buzzer. The LEDs are turned off initially, and the system waits in an idle state. A message is sent via serial communication prompting the user to press the joystick button to start the game. Additionally, a random seed is generated using analog input to ensure different patterns each time the game runs.
+
+For input handling, the system continuously reads the joystick values. The horizontal axis (VRX) is used to move a cursor across the LEDs (left or right). A threshold-based logic is implemented so that movement only occurs when the joystick crosses defined limits, preventing continuous scrolling when the joystick is held in one direction. The joystick button acts as a confirmation input to select the currently highlighted LED.
+
+There are no external sensors in this system, but the joystick serves as the primary input device. Its analog signal determines movement direction, while its digital switch is used for selection and starting the game.
+
+The decision logic is based on a memory pattern game mechanism. At the beginning of each round, a random sequence of LEDs is generated and displayed to the user. The system then waits for the user to repeat the pattern step-by-step. Each user input is compared with the expected sequence:
+
+If the input matches the pattern, the system proceeds to the next step
+If the input is incorrect, the game immediately ends
+
+For output behavior, the LEDs are used to display both the pattern and the player’s current selection. During the pattern phase, LEDs blink sequentially to show the correct order. During input, a single LED acts as a cursor indicating the player’s current position. If the player makes a mistake, a buzzer is activated and all LEDs flash in a pattern to indicate failure. If the player correctly completes a round, the score increases and the game continues with increased difficulty by reducing the delay between LED flashes.
+
+There is no external communication logic such as WiFi or Bluetooth, as the entire system operates locally using onboard components including LEDs, joystick, and buzzer. Serial communication is only used for debugging and displaying game status messages.
+
+After each round, the system dynamically increases the difficulty by reducing the time delay used to display the pattern, making it harder for the player to remember. If the player loses, the system exits the game loop and returns to the initial waiting state, where the user must press the joystick button again to restart the game.
 - **Reset behavior:**  
   If no command is received within a short timeout, the ESP32 stops the motors. The game resets when a level is completed or restarted.`
 
