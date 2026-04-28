@@ -75,7 +75,7 @@ By the final review, this README should clearly show:
 
 `(because Project-or)`
 
-<img width="1600" height="1131" alt="image" src="https://github.com/user-attachments/assets/c64bfbd4-b3b7-43d9-83ad-c203a5aa11bc" />
+
 
 ## 1.4 One-Line Pitch
 
@@ -121,7 +121,7 @@ List what inspired the project.
 
 | Source Type | Title / Link                                                        | What Inspired You                                                                         |
 | ----------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `[YOUTUBE]`   | `(https://youtu.be/R_HF4PIuCJA?si=_zFgoTzvEJT0yjld)` | `Memory Mapping` |
+| `[YOUTUBE]`   | `(https://youtu.be/R_HF4PIuCJA?si=_zFgoTzvEJT0yjld)` | `Memory Mapping` | 
 |             |                                                                     |                                                                                           |
 |             |                                                                     |                                                                                           |
 
@@ -138,7 +138,7 @@ The originality of this project lies in transforming a simple LED blinking syste
 ## 4.1 User Journey 
 
 Describe exactly how a user will use the project.Make it a story
-A student connects the Raspberry Pi Pico to power and the LEDs turn ON in a simple blinking pattern. The student presses a button, and the LEDs start moving one by one like a running light. When the button is pressed again, the pattern changes to a different style. The student realizes that by giving simple inputs, they can control how the LEDs behave. This small setup helps them understand how a microcontroller controls outputs and creates patterns. 
+A Person connects the Raspberry Pi Pico to power and the LEDs turn ON in a simple blinking pattern. The student presses a button, and the LEDs start moving one by one like a running light. When the button is pressed again, the pattern changes to a different style. The student realizes that by giving simple inputs, they can control how the LEDs behave.From this project we can increas our memory strength.
 
                                                   |
 
@@ -214,7 +214,14 @@ Include:
 
 ## 6.3 Input / Output Map
 
-| System Part                              | Type            | What It Does                                                               |
+| System Part            | Type                  | What It Does                                                             |
+| ---------------------- | --------------------- | ------------------------------------------------------------------------ |
+| Joystick               | Input                 | Allows the user to navigate through led's and make the correct pattern         |
+| Shrike Lite (RP2040)   | Processing            | Executes game logic, reads input, controls joysticks, and evaluates answers |
+| led's (x5)| Output                | show the pattern                      |
+| LCD Display            | Output                | Shows answer options and game messages                                   |
+
+|BreadboRD     | Mechanical/Structural | Holds all components together and forms the body of JORVIS               |
 
 
 ---
@@ -507,10 +514,10 @@ Expected outcomes:
 
 | Week   | Planned Goal   | What Actually Happened | What Changed   | Next Steps     |
 | ------ | -------------- | ---------------------- | -------------- | -------------- |
-| Week 1 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-| Week 2 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-| Week 3 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-| Week 4 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
+|  Hour 1 | | `[Write here]`         | `[Write here]` | `[Write here]` |
+|  Hour  2 | `[Writeh here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
+| Hour 3 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
+| Hour 4 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
 
 ---
 
@@ -526,8 +533,7 @@ Expected outcomes:
 ## 14.2 Biggest Unknown Right Now
 
 What is the single biggest uncertainty in your project at this stage?
-
-**Response:**  
+The biggest problem faced at this stage is ensuring consistent and accurate synchronization between user input (joystick/buttons) and real-time LED pattern updates, especially under timing , as small delays or logic mismatches can affect responsiveness and overall user experience 
 
 
 ---
@@ -639,22 +645,21 @@ Suggested images:
 ## 17.1 Final Description
 
 Describe the final version of your project.
-
-**Response:**  
+The final version of the project is an interactive LED-based system built using a Raspberry Pi Pico with the Shrike Light module, where multiple LEDs display dynamic patterns controlled by programmed logic and user input. The microcontroller generates clear and responsive visual outputs, with LEDs representing different states such as movement, patterns, or game elements.
+User interaction through a joystick (or buttons) enables real-time control, making the system interactive rather than just pre-programmed. The design emphasizes clarity and smooth transitions, ensuring patterns run without flickering and are easy to understand. Patterns include sequential lighting, random generation, and movement-based effects that simulate motion across LEDs. Overall, the project successfully integrates hardware and software into a stable, responsive, and engaging system within given constraints.  
 
 
 ## 17.2 What Works Well
-
+The code we have selected has run properly and led started to glow properly and at wrong selection the buzzer started to buzz 
 
 
 ## 17.3 What Still Needs Improvement
-
+We stil need to improve code to re-set the LED and we could add lED so that at wich level the person reached that can be showed and a sound system to make it more intresting  
 
 ## 17.4 What Changed From the Original Plan
 
 How did the project change from the initial idea?
-
-**Response:**  
+The project evolved from a basic LED pattern generator into a more interactive and responsive system, where instead of just displaying predefined patterns, user input (joystick/buttons) was incorporated to control movement and behavior. Initially, the focus was on complex visual patterns, but due to hardware and time constraints, the design was simplified to clearer, more meaningful patterns with better responsiveness. The project also shifted from static animations to a dynamic system with real-time feedback, improving user engagement and overall functionality.  
 
 
 ---
@@ -663,22 +668,33 @@ How did the project change from the initial idea?
 
 ## 18.1 Team Reflection
 
-What did your team do well?  
+What did your team do well?
+Strong collaboration within the limited 8-hour timeline, with parallel progress on LED hardware setup, pattern logic coding, and documentation. Quick and practical decision-making during ideation, especially in selecting achievable LED patterns and interaction methods. Effective adaptability in simplifying designs to ensure a working prototype. Continuous team support where members assisted in debugging circuits and code together. Successful integration of LED hardware and software logic into a responsive and visually clear system.
 What slowed you down?  
-How well did you manage time, tasks, and responsibilities?
+We want use lcd display for the score projection but due to some hardware and technical issue we are not able to use it, It wasted most of our time. The integration of led patterns and joystick was hectic as we face many challenges to conncet it like led's are not working in sequence ,when the button on the joystick is pressed it is not working.
 
-**Response:**  
+How well did you manage time, tasks, and responsibilities?
+The task were divided by the four grp members equally the thouth was to complete it withing 6 hoursn but it was'nt gone as planned we were late according tothe time set within ourself but at last the work was fully done all the members understood about their work and responsibility   
+
 
 
 ## 18.2 Technical Reflection
 
 What did you learn about:
 
-- electronics,
-- coding,
-- mechanisms,
-- fabrication,
-- integration?
+
+Electronics: Learned how to safely and efficiently control multiple LEDs using microcontroller outputs, resistors, and proper wiring.
+learn about why experimenting with connection is important 
+
+Coding: Learned to create and manage LED patterns using loops,  timing control, and logical sequencing (all the codes copied from Chat-gpt).
+
+Mechanisms: Learned how light patterns and timing can simulate motion and create interactive visual behavior using joystick.
+
+Fabrication: Not Applicable.
+
+Integration: Learned to combine hardware and software so that code-driven logic produces accurate real-world LED patterns.
+
+
 
 **Response:**  
 
@@ -687,23 +703,25 @@ What did you learn about:
 
 What did you learn about:
 
-- designing ,
-- delight,
-- clarity,
-- physical interaction,
-- understanding,
-- iteration?
+Designing: Good design is about simplifying complex systems into something buildable within real constraints, ensuring hardware, code, and interaction all work together smoothly.
 
-**Response:**  
+Delight: Score base system helps user to get more intrest in the game.
+
+Clarity: Physical outputs must be unambiguous; clear servo positions and well-timed movements are essential for users to correctly interpret semaphore gestures.
+
+Physical Interaction: Using joystick for the led pattern recognition it helps user to engage more and keep there intrest in it.
+
+Understanding: Users learn better when information is introduced gradually, starting with simple led pattern and clear visual patterns it helps to strength our memory.
+
+Iteration: Continuous testing and refinement were critical;most improvment came from debugging and trying different logic patterns.
+
 
 
 ## 18.4 If You Had One More hour
 
 What would you improve next?
 
-**Response:**  
-
-` `
+First we will add a display for showing a score and a sound system for making the game more engaging.Also we want to make a 4x4 or 8x8 led pannel so that the game can become more instesting and chalenging.
 
 ---
 
